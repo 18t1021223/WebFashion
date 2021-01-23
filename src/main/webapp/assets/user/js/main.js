@@ -219,6 +219,11 @@
         /* TIỀN TỆ :*/
 
         function ajaxProductList(categoryId, orderBy, page, pageSize, productStatus ,keywordSearch) {
+             $('<div class="modal-loading">'
+                +'<div class="modal-loading-body">'
+                +'<img src="/assets/user/img/ajax-loader.gif" class="loading-icon" alt="loading">'
+                +'</div>'
+                +'</div> ').appendTo('body')
             $.ajax({
                 url: '/ajax/product/category',
                 type: 'get',
@@ -335,6 +340,8 @@
                 $('input[name=keywordSearch]').val(result.keywordSearch)
             }).fail(function (jqXHR, errorThrown) {
                 func_error()
+            }).always(function(){
+                $('.modal-loading').remove()
             })
         }
 
