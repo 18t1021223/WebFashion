@@ -39,12 +39,12 @@ public class cartServiceImpl implements cartService {
 	public Map<mapKey, cartDto> getCart(HttpServletRequest req) {
 		Map<mapKey, cartDto> cart = new LinkedHashMap<>();
 		Cookie cookieArr[] = req.getCookies();
-		if (cookieArr.length <= 0)
-			return null;
-		for (Cookie ck : cookieArr) {
-			if (ck.getName().equals("cart")) {
-				cart = getValue(ck.getValue().split("[|]"));
-				break;
+		if (cookieArr != null) {
+			for (Cookie ck : cookieArr) {
+				if (ck.getName().equals("cart")) {
+					cart = getValue(ck.getValue().split("[|]"));
+					break;
+				}
 			}
 		}
 		return cart;
