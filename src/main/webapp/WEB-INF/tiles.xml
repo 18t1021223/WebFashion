@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- master -->
+	<definition name="master.layout"
+		template="/WEB-INF/views/common/user/layouts/user.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/views/common/user/base/_header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/common/user/base/_footer.jsp" />
+		
+	</definition>
+	
+	<!--child Home Page -->
+	<definition name="home" extends="master.layout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/user/body/_home.jsp" />
+	</definition>
+	
+	<!--child single-product Page -->
+	<definition name="single_product" extends="master.layout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/user/body/_single_product.jsp" />
+	</definition>
+	
+	<!--child shop_gird Page -->
+	<definition name="shop_gird" extends="master.layout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/user/body/_shop_gird.jsp" />
+	</definition>
+	
+	<!--child register/login Page -->
+	<definition name="registration" extends="master.layout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/user/body/_register_login.jsp" />
+	</definition>
+	
+	<!--child account Page -->
+	<definition name="account" extends="master.layout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/common/user/body/_account_info.jsp" />
+	</definition>
+
+	<!-- contact Page-->
+	<definition name="contact" extends="master.layout">
+		<put-attribute name="body" value="/WEB-INF/views/common/user/body/_contact.jsp"/>
+	</definition>
+
+	<!-- cart Page-->
+	<definition name="cart" extends="master.layout">
+		<put-attribute name="body" value="/WEB-INF/views/common/user/body/_cart.jsp"/>
+	</definition>
+	
+	<!-- checkout-address Page-->
+	<definition name="checkout-address" extends="master.layout">
+		<put-attribute name="body" value="/WEB-INF/views/common/user/body/_checkout-address.jsp"/>
+	</definition>
+	
+	<!-- checkout-details Page-->
+	<definition name="checkout-details" extends="master.layout">
+		<put-attribute name="body" value="/WEB-INF/views/common/user/body/_checkout_details.jsp"/>
+		
+	</definition>
+	
+	<!-- order Page-->
+	<definition name="order" extends="master.layout">
+		<put-attribute name="body" value="/WEB-INF/views/common/user/body/_order.jsp"/>
+		
+	</definition>
+</tiles-definitions> 
