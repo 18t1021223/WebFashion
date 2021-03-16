@@ -405,7 +405,6 @@
         $('body').delegate('.pagi-num' ,'click' , function (e) {
             e.preventDefault();
             let isLock = $(this).parents('li').hasClass('disabled')
-            console.log(isLock)
             if(isLock == true) return;
             let categoryId = $('#parent').data('categoryid')
             let orderBy = $('#sortBy').find(':selected').val()
